@@ -47,11 +47,11 @@
   [data-theme="dark"] {
     --bg: #0E0E0D;
     --ink: #EDEDEA;
-    --ink-muted: #888884;
-    --ink-faint: #3C3C3A;
-    --rule: #242422;
+    --ink-muted: #B6B6AE;
+    --ink-faint: #8A8A84;
+    --rule: #343432;
     --card-bg: #161614;
-    --card-border: #242422;
+    --card-border: #30302E;
     --card-hover: #1C1C1A;
     --tag-bg: #222220;
     --tag-ink: #AEAEAA;
@@ -339,6 +339,7 @@
   footer {
     border-top: 1px solid var(--rule); padding: 1.5rem 0;
     display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem;
   }
   .footer-copy {
     font-size: 0.63rem; letter-spacing: 0.08em; text-transform: uppercase;
@@ -347,6 +348,19 @@
   .footer-right {
     font-size: 0.63rem; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--ink-faint);
+  }
+  .footer-link {
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+  .footer-link:hover { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
 
   /* ── Animations ── */
@@ -687,7 +701,7 @@
 
   <footer>
     <span class="footer-copy">© 2026 Coldforge</span>
-    <span class="footer-right">Luke Holmes</span>
+    <span class="footer-right">Made and produced by Luke Holmes · <a class="footer-link" href="https://coldforge.tech" target="_blank" rel="noopener">coldforge.tech</a></span>
   </footer>
 
 </div>
