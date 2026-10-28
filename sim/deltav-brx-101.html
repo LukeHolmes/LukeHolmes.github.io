@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeltaV™ Live &amp;amp; MES Biopharma Facility Simulation — UNIT_BRX_101 (QA-Hardened)</title>
+  <title>DeltaV™ Live &amp; MES Biopharma Facility Simulation — UNIT_BRX_101 (QA-Hardened)</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Fonts: Inter &amp; JetBrains Mono -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -125,15 +125,15 @@
 <body class="bg-dv-bg text-slate-200 font-sans antialiased select-none overflow-x-hidden min-h-screen flex flex-col">
 
   <!-- =========================================================================
-       1. TOP DELTAV WORKSTATION HEADER &amp; LIVE PRIORITY ALARM BANNER
+       1. TOP DELTAV WORKSTATION HEADER & LIVE PRIORITY ALARM BANNER
   ========================================================================== -->
   <header class="bg-dv-panel border-b border-dv-border z-30 shrink-0">
-    <!-- Row 1: Hierarchy, Batch/Phase Status, L3 MES Handshake, Sim Controls &amp; Role Switcher -->
+    <!-- Row 1: Hierarchy, Batch/Phase Status, L3 MES Handshake, Sim Controls & Role Switcher -->
     <div class="px-3 py-2 flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/90">
       
       <!-- Left Group: ISA-88 Hierarchy + Active Batch + S88 Phase State + L3 MES Pill -->
       <div class="flex items-center gap-2 flex-wrap">
-        <!-- DeltaV System Brand &amp; Hierarchy -->
+        <!-- DeltaV System Brand & Hierarchy -->
         <div class="flex items-center gap-2 bg-slate-950/90 border border-slate-800 px-2.5 py-1 rounded">
           <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#06b6d4]"></span>
           <span class="font-mono text-xs font-bold tracking-wider text-cyan-400">DeltaV™ LIVE</span>
@@ -142,7 +142,7 @@
           <span class="text-slate-500 text-[11px] hidden 2xl:inline">(2,000L Fed-Batch Bioreactor)</span>
         </div>
 
-        <!-- Batch &amp; S88 State Pill -->
+        <!-- Batch & S88 State Pill -->
         <div class="flex items-center gap-2 bg-slate-950/80 border border-slate-800 px-2.5 py-1 rounded text-xs">
           <span class="text-slate-400 font-mono">Batch:</span>
           <span id="hdr-batch-id" class="font-mono font-semibold text-white">BATCH-2026-042</span>
@@ -160,9 +160,9 @@
         </button>
       </div>
 
-      <!-- Right Group: Sim Clock &amp; Speed, Fault Injector, Role Switcher -->
+      <!-- Right Group: Sim Clock & Speed, Fault Injector, Role Switcher -->
       <div class="flex items-center gap-2 flex-wrap">
-        <!-- Sim Clock &amp; Speed Buttons -->
+        <!-- Sim Clock & Speed Buttons -->
         <div class="flex items-center bg-slate-950/90 border border-slate-800 rounded p-0.5 text-xs">
           <span class="px-2 font-mono text-[11px] text-slate-400" title="1 real sec = 1 simulated process min at 1x">
             <i class="fa-regular fa-clock mr-1 text-cyan-400"></i><span id="hdr-sim-clock">00:00:00</span>
@@ -203,7 +203,7 @@
 
     <!-- Row 2: Live DeltaV Alarm Annunciator Banner -->
     <div class="px-3 py-1.5 bg-slate-950 flex flex-wrap items-center justify-between gap-2">
-      <!-- Priority Counters &amp; Highest Priority Active Banner -->
+      <!-- Priority Counters & Highest Priority Active Banner -->
       <div class="flex items-center gap-2 flex-1 min-w-[280px]">
         <div class="flex items-center gap-1 shrink-0">
           <span id="alm-cnt-crit" class="font-mono text-[11px] font-bold px-2 py-0.5 rounded bg-red-950 text-red-400 border border-red-800/60">CRIT: 0</span>
@@ -237,14 +237,14 @@
   </header>
 
   <!-- =========================================================================
-       2. MAIN WORKSPACE: LEFT/CENTER P&amp;ID CANVAS + RIGHT 4-TAB INSPECTOR
+       2. MAIN WORKSPACE: LEFT/CENTER P&ID CANVAS + RIGHT 4-TAB INSPECTOR
   ========================================================================== -->
   <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-0 overflow-hidden border-b border-dv-border">
     
-    <!-- CENTER CANVAS: ISA-101 High-Performance HMI P&amp;ID (7 Columns on Desktop) -->
+    <!-- CENTER CANVAS: ISA-101 High-Performance HMI P&ID (7 Columns on Desktop) -->
     <section class="lg:col-span-7 bg-dv-bg relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-dv-border overflow-hidden">
       
-      <!-- Canvas Top Sub-Bar: Equipment Status KPIs &amp; Active Fault Badges -->
+      <!-- Canvas Top Sub-Bar: Equipment Status KPIs & Active Fault Badges -->
       <div class="px-3 py-2 bg-slate-950/70 border-b border-slate-800/80 flex flex-wrap items-center justify-between gap-2 z-10">
         <div class="flex items-center gap-3 text-xs font-mono flex-wrap">
           <span class="text-slate-400">UNIT: <strong class="text-white">BRX-101</strong></span>
@@ -274,7 +274,7 @@
         </button>
       </div>
 
-      <!-- Interactive SVG P&amp;ID Schematic -->
+      <!-- Interactive SVG P&ID Schematic -->
       <div class="flex-1 flex items-center justify-center p-2 relative overflow-hidden">
         <svg id="pid-svg" viewBox="0 0 860 500" class="w-full h-full max-h-[500px] select-none">
           <defs>
@@ -325,7 +325,7 @@
             <text x="-18" y="-12" fill="#94a3b8" font-family="JetBrains Mono" font-size="9">SV-SIP</text>
           </g>
 
-          <!-- 2. Media &amp; Inoculum Addition Line (Top-Left via XV-101 &amp; MAT-101) -->
+          <!-- 2. Media & Inoculum Addition Line (Top-Left via XV-101 & MAT-101) -->
           <path d="M 75,135 L 250,135 L 250,105 L 330,105 L 330,120" fill="none" stroke="#334155" stroke-width="5" />
           <path id="pipe-feed-flow" d="M 75,135 L 250,135 L 250,105 L 330,105 L 330,120" fill="none" stroke="#10b981" stroke-width="3.5" class="hidden pipe-flow-active" />
           <text x="78" y="124" fill="#94a3b8" font-family="JetBrains Mono" font-size="10" font-weight="600">STERILE MEDIA / INOCULUM</text>
@@ -348,7 +348,7 @@
             <text x="-16" y="25" fill="#94a3b8" font-family="JetBrains Mono" font-size="9">P-102</text>
           </g>
 
-          <!-- 4. Jacket Thermal Loop Supply &amp; Return (Left Lower via TV-101) -->
+          <!-- 4. Jacket Thermal Loop Supply & Return (Left Lower via TV-101) -->
           <path d="M 75,275 L 274,275" fill="none" stroke="#334155" stroke-width="5" />
           <path id="pipe-jacket-flow" d="M 75,275 L 274,275" fill="none" stroke="#0ea5e9" stroke-width="3.5" class="pipe-flow-active" />
           <path d="M 274,345 L 180,345" fill="none" stroke="#334155" stroke-width="4" />
@@ -378,7 +378,7 @@
           <path id="pipe-harvest-flow" d="M 420,395 L 420,455 L 650,455" fill="none" stroke="#06b6d4" stroke-width="4" class="hidden pipe-flow-active" />
           <text x="535" y="445" fill="#94a3b8" font-family="JetBrains Mono" font-size="10" font-weight="600">TO HARVEST HOLD TANK</text>
 
-          <!-- ==================== BIOREACTOR VESSEL &amp; JACKET ==================== -->
+          <!-- ==================== BIOREACTOR VESSEL & JACKET ==================== -->
           <!-- Outer Thermal Jacket Shell -->
           <path d="M 274,175 L 288,175 L 288,355 Q 288,408 420,408 Q 552,408 552,355 L 552,175 L 566,175 L 566,358 Q 566,420 420,420 Q 274,420 274,358 Z"
                 fill="url(#jacketThermalGrad)" stroke="#475569" stroke-width="1.5" />
@@ -387,7 +387,7 @@
           <path d="M 290,115 Q 420,78 550,115 L 550,340 Q 550,395 420,395 Q 290,395 290,340 Z"
                 fill="url(#vesselWallGrad)" stroke="#94a3b8" stroke-width="2.5" />
 
-          <!-- Clipped Vessel Interior: Dynamic Liquid Level, Foam, Bubbles &amp; Steam -->
+          <!-- Clipped Vessel Interior: Dynamic Liquid Level, Foam, Bubbles & Steam -->
           <g clip-path="url(#vesselClip)">
             <!-- Dynamic Liquid Rectangle (y and height updated dynamically from LI-101 PV) -->
             <rect id="svg-liquid-rect" x="285" y="255" width="270" height="150" fill="url(#liquidFillGrad)" />
@@ -410,7 +410,7 @@
               <circle cx="475" cy="215" r="24" fill="#f8fafc" fill-opacity="0.25" class="steam-cloud" style="animation-delay: 1.1s;" />
             </g>
 
-            <!-- Internal Baffles &amp; Sparger Ring -->
+            <!-- Internal Baffles & Sparger Ring -->
             <rect x="296" y="135" width="5" height="205" fill="#475569" opacity="0.55" />
             <rect x="539" y="135" width="5" height="205" fill="#475569" opacity="0.55" />
             <ellipse cx="420" cy="365" rx="34" ry="5" fill="none" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="3 2" />
@@ -424,7 +424,7 @@
             <line x1="535" y1="295" x2="545" y2="295" /><text x="506" y="298">500L</text>
           </g>
 
-          <!-- Top Magnetic Drive Agitator Motor &amp; Dual Rushton Impellers -->
+          <!-- Top Magnetic Drive Agitator Motor & Dual Rushton Impellers -->
           <g>
             <!-- Motor Housing -->
             <rect x="402" y="38" width="36" height="48" rx="4" fill="#334155" stroke="#cbd5e1" stroke-width="1.5" />
@@ -530,7 +530,7 @@
           <button onclick="window.simApp.selectTag('XV-101')" id="qtag-XV-101" class="px-2 py-0.5 rounded font-mono text-[11px] bg-slate-900 text-slate-300 border border-slate-700">XV-101</button>
           <button onclick="window.simApp.selectTag('XV-102')" id="qtag-XV-102" class="px-2 py-0.5 rounded font-mono text-[11px] bg-slate-900 text-slate-300 border border-slate-700">XV-102</button>
         </div>
-        <span class="font-mono text-[11px] text-slate-500 hidden sm:inline">ISA-101 High-Performance HMI • Anti-Windup &amp;amp; Interlocks Active</span>
+        <span class="font-mono text-[11px] text-slate-500 hidden sm:inline">ISA-101 High-Performance HMI • Anti-Windup &amp; Interlocks Active</span>
       </div>
     </section>
 
@@ -574,7 +574,7 @@
           </div>
         </div>
 
-        <!-- PV / SP / OUT Gauges &amp; Live Numeric Controls -->
+        <!-- PV / SP / OUT Gauges & Live Numeric Controls -->
         <div class="bg-dv-card border border-dv-border rounded-md p-3 space-y-3">
           <!-- Process Value (PV) Bar -->
           <div>
@@ -587,7 +587,7 @@
             </div>
           </div>
 
-          <!-- Setpoint (SP) Bar &amp; Input (For Analog PID Loops) -->
+          <!-- Setpoint (SP) Bar & Input (For Analog PID Loops) -->
           <div id="fp-sp-section">
             <div class="flex justify-between items-center text-xs font-mono mb-1">
               <span class="text-slate-400">SP (Setpoint Target)</span>
@@ -603,7 +603,7 @@
             </div>
           </div>
 
-          <!-- Output (OUT %) Bar &amp; Manual Slider -->
+          <!-- Output (OUT %) Bar & Manual Slider -->
           <div id="fp-out-section">
             <div class="flex justify-between items-center text-xs font-mono mb-1">
               <span class="text-slate-400">OUT (Actuator / Drive Output %)</span>
@@ -657,11 +657,11 @@
           </div>
         </div>
 
-        <!-- Live Safety Interlocks &amp; Permissive Diagnostic Checklist -->
+        <!-- Live Safety Interlocks & Permissive Diagnostic Checklist -->
         <div class="bg-dv-card border border-dv-border rounded-md p-3 space-y-2">
           <div class="flex items-center justify-between">
             <span class="text-xs font-mono font-semibold text-slate-300">
-              <i class="fa-solid fa-shield-halved text-cyan-400 mr-1.5"></i>Hard Safety Interlocks &amp;amp; Permissives (`INTLK_CND`)
+              <i class="fa-solid fa-shield-halved text-cyan-400 mr-1.5"></i>Hard Safety Interlocks &amp; Permissives (`INTLK_CND`)
             </span>
             <button id="btn-bypass-intlk" onclick="window.simApp.requestInterlockBypass()" class="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-950/80 hover:bg-amber-900 text-amber-300 border border-amber-700/70 transition">
               Eng Bypass (Part 11)
@@ -697,7 +697,7 @@
         <div class="bg-dv-card border border-dv-border rounded-md p-2.5">
           <div class="text-[11px] font-mono text-slate-400 mb-1.5 flex items-center justify-between">
             <span>Bidirectional S88 / L3 MES Handshake Registers (`UNIT_BRX_101`)</span>
-            <button onclick="window.simApp.forceAdvancePhase()" class="text-[10px] text-cyan-400 hover:underline" title="Supervisor / Engineer manual step advance">Force Step &amp;raquo;</button>
+            <button onclick="window.simApp.forceAdvancePhase()" class="text-[10px] text-cyan-400 hover:underline" title="Supervisor / Engineer manual step advance">Force Step &raquo;</button>
           </div>
           <div class="grid grid-cols-4 gap-1.5 font-mono text-[11px] text-center">
             <div class="bg-slate-950 p-1.5 rounded border border-slate-800">
@@ -806,11 +806,11 @@
           <div class="grid grid-cols-2 gap-2 font-mono text-xs pt-1">
             <button id="fbd-btn-dobad" onclick="window.simApp.engineeringToggleFault('DO_BAD_INPUT')" class="p-2 rounded bg-slate-900 hover:bg-slate-800 border border-fuchsia-700/60 text-fuchsia-300 text-left transition">
               <div class="font-bold">Toggle AIC-103 `Bad_Input`</div>
-              <div class="text-[10px] text-slate-400">Simulates 4-20mA wire break &amp;amp; MAN shed</div>
+              <div class="text-[10px] text-slate-400">Simulates 4-20mA wire break &amp; MAN shed</div>
             </button>
             <button id="fbd-btn-tv101" onclick="window.simApp.engineeringToggleFault('TV101_STUCK')" class="p-2 rounded bg-slate-900 hover:bg-slate-800 border border-amber-700/60 text-amber-300 text-left transition">
               <div class="font-bold">Toggle TV-101 Jacket Stuck</div>
-              <div class="text-[10px] text-slate-400">Tests PID saturation &amp;amp; integral freeze</div>
+              <div class="text-[10px] text-slate-400">Tests PID saturation &amp; integral freeze</div>
             </button>
           </div>
         </div>
@@ -823,7 +823,7 @@
           <div class="flex items-center justify-between mb-2">
             <div>
               <span class="font-mono text-xs font-bold text-cyan-300">A. MASTER BATCH RECORD (MBR) PARAMETER DOWNLOAD</span>
-              <p class="text-[11px] text-slate-400">Recipe ID: <strong class="text-white">MBR-MAB-2000L-V4</strong> (Syncade / PAS-X L3 &amp;rarr; L2)</p>
+              <p class="text-[11px] text-slate-400">Recipe ID: <strong class="text-white">MBR-MAB-2000L-V4</strong> (Syncade / PAS-X L3 &rarr; L2)</p>
             </div>
             <span id="mes-mbr-badge" class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-700/70">PENDING DOWNLOAD</span>
           </div>
@@ -884,10 +884,10 @@
           </div>
         </div>
 
-        <!-- Section C: Off-Line IPC Blood Gas Analyzer (BGA) &amp; 1-Pt Calibration Offset -->
+        <!-- Section C: Off-Line IPC Blood Gas Analyzer (BGA) & 1-Pt Calibration Offset -->
         <div class="bg-dv-card border border-dv-border rounded-md p-3 space-y-2">
           <div class="flex items-center justify-between">
-            <span class="font-mono text-xs font-bold text-pink-400">C. OFF-LINE IPC BGA SAMPLE (`SV-101`) &amp;amp; 1-PT pH OFFSET</span>
+            <span class="font-mono text-xs font-bold text-pink-400">C. OFF-LINE IPC BGA SAMPLE (`SV-101`) &amp; 1-PT pH OFFSET</span>
             <span id="mes-bga-badge" class="font-mono text-[10px] px-2 py-0.5 rounded bg-slate-900 text-slate-400 border border-slate-700">NO SAMPLE</span>
           </div>
           <div class="grid grid-cols-4 gap-1.5 text-center font-mono text-xs">
@@ -921,7 +921,7 @@
         <!-- Section D: eBR Review-by-Exception (RBE) QA Release Summary -->
         <div class="bg-dv-card border border-dv-border rounded-md p-3 space-y-2">
           <div class="flex items-center justify-between">
-            <span class="font-mono text-xs font-bold text-slate-200">D. eBR REVIEW-BY-EXCEPTION (RBE) &amp;amp; QA RELEASE</span>
+            <span class="font-mono text-xs font-bold text-slate-200">D. eBR REVIEW-BY-EXCEPTION (RBE) &amp; QA RELEASE</span>
             <span id="mes-rbe-status" class="font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300">IN PROGRESS</span>
           </div>
           <div id="mes-rbe-checklist" class="space-y-1 font-mono text-[11px] text-slate-300">
@@ -936,7 +936,7 @@
   </main>
 
   <!-- =========================================================================
-       3. BOTTOM WORKSTATION DRAWER: HISTORIAN, MISSIONS, CSA/OQ &amp; AUDIT TRAIL
+       3. BOTTOM WORKSTATION DRAWER: HISTORIAN, MISSIONS, CSA/OQ & AUDIT TRAIL
   ========================================================================== -->
   <footer class="bg-dv-panel shrink-0 flex flex-col h-64">
     <!-- Bottom Drawer Tab Bar -->
@@ -994,7 +994,7 @@
       <div class="flex items-center justify-between flex-wrap gap-2 border-b border-slate-800 pb-2">
         <div class="text-xs font-mono">
           <span class="text-amber-300 font-bold">GAMP 5 / CSA OPERATIONAL QUALIFICATION SUITE:</span>
-          <span class="text-slate-400 ml-2">Reactive verification on every scan cycle + automated challenge runner &amp;amp; RFC-4180 CSV export.</span>
+          <span class="text-slate-400 ml-2">Reactive verification on every scan cycle + automated challenge runner &amp; RFC-4180 CSV export.</span>
         </div>
         <div class="flex items-center gap-2">
           <button onclick="window.simApp.exportValidationPackage('JSON')" class="px-2.5 py-1 rounded bg-cyan-600 hover:bg-cyan-500 text-white font-mono text-xs font-bold transition">
@@ -1027,8 +1027,8 @@
               <th class="py-1 px-2">Sim Time</th>
               <th class="py-1 px-2">Action Type</th>
               <th class="py-1 px-2">Tag / Object</th>
-              <th class="py-1 px-2">Old Value &amp;rarr; New Value</th>
-              <th class="py-1 px-2">User / Role &amp;amp; E-Signature Reason</th>
+              <th class="py-1 px-2">Old Value &rarr; New Value</th>
+              <th class="py-1 px-2">User / Role &amp; E-Signature Reason</th>
             </tr>
           </thead>
           <tbody id="audit-trail-tbody" class="divide-y divide-slate-800/60 text-[11px]">
@@ -1094,7 +1094,7 @@
       <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-800 font-mono text-xs">
         <button onclick="window.simApp.closePart11Modal()" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-300">Cancel (Discard)</button>
         <button onclick="window.simApp.confirmPart11Signature()" class="px-3.5 py-1.5 rounded bg-cyan-600 hover:bg-cyan-500 text-white font-bold">
-          <i class="fa-solid fa-check-double mr-1"></i>Sign &amp;amp; Execute
+          <i class="fa-solid fa-check-double mr-1"></i>Sign &amp; Execute
         </button>
       </div>
     </div>
@@ -1121,7 +1121,7 @@
         activeBottomTab: 'HISTORIAN',
         impellerAngle: 0,
 
-        // ISA-88 Batch &amp; Phase State Machine (QA Fix 2: State-locked progress)
+        // ISA-88 Batch & Phase State Machine (QA Fix 2: State-locked progress)
         batchId: 'BATCH-2026-042',
         batchState: 'IDLE',      // IDLE, RUNNING, HOLDING, HELD, RESTARTING, COMPLETE, ABORTED
         phaseIndex: 0,           // 0:PH_SIP, 1:PH_MEDIA_CHARGE, 2:PH_EQUILIBRATE, 3:PH_INOC_GROWTH, 4:PH_HARVEST
@@ -1304,7 +1304,7 @@
           'XV-101': {
             id: 'XV-101',
             type: 'DO_VALVE',
-            desc: 'Sterile Media &amp; Inoculum Addition Isolation Valve',
+            desc: 'Sterile Media & Inoculum Addition Isolation Valve',
             unit: '',
             mode: 'AUTO',
             pv: 0,
@@ -1357,14 +1357,14 @@
             id: 'PH_SIP',
             step: 1,
             title: '1. PH_SIP (121.5°C Sterilization)',
-            targetSummary: 'Download L3 MBR &amp; Hold TIC-101 >= 121.0°C for 5.0 sim mins',
+            targetSummary: 'Download L3 MBR & Hold TIC-101 >= 121.0°C for 5.0 sim mins',
             mesGateDesc: 'Gate: L3 MBR Parameter Download Required'
           },
           {
             id: 'PH_MEDIA_CHARGE',
             step: 2,
             title: '2. PH_MEDIA_CHARGE (Media Fill)',
-            targetSummary: 'Scan Valid Media Lot at MAT-101 &amp; Fill LI-101 to 1,400 L via XV-101',
+            targetSummary: 'Scan Valid Media Lot at MAT-101 & Fill LI-101 to 1,400 L via XV-101',
             mesGateDesc: 'Gate: Barcoded Media Scan (LOT-MED-2026-09A) at MAT-101'
           },
           {
@@ -1379,13 +1379,13 @@
             step: 4,
             title: '4. PH_INOC_GROWTH (Fed-Batch Growth)',
             targetSummary: 'Scan Seed Lot, Reconcile SV-101 BGA pH, Grow VCD >= 3.5 ×10⁶ cells/mL',
-            mesGateDesc: 'Gate: Seed Scan (LOT-INOC-2026-88C) &amp; SV-101 IPC BGA Reconciliation'
+            mesGateDesc: 'Gate: Seed Scan (LOT-INOC-2026-88C) & SV-101 IPC BGA Reconciliation'
           },
           {
             id: 'PH_HARVEST',
             step: 5,
-            title: '5. PH_HARVEST (Cool < 40°C &amp; Transfer)',
-            targetSummary: 'Cool TIC-101 < 40.0°C to clear INTLK-101, Open XV-102 &amp; Drain to 200 L',
+            title: '5. PH_HARVEST (Cool < 40°C & Transfer)',
+            targetSummary: 'Cool TIC-101 < 40.0°C to clear INTLK-101, Open XV-102 & Drain to 200 L',
             mesGateDesc: ''
           }
         ],
@@ -1393,7 +1393,7 @@
         // Active Alarms List
         alarms: [],
 
-        // Historian Ring Buffer (max 300 ticks) &amp; Pen Visibility
+        // Historian Ring Buffer (max 300 ticks) & Pen Visibility
         historian: [],
         bgaMarkers: [],
         pens: {
@@ -1421,7 +1421,7 @@
         missions: [
           {
             id: 'M1',
-            title: 'Mission 1: Faceplate &amp; Interlocks',
+            title: 'Mission 1: Faceplate & Interlocks',
             desc: 'Select XV-102 or XV-101 and verify how hard safety interlocks (INTLK-101 / INTLK-MES-MAT) prevent manual opening.',
             done: false
           },
@@ -1433,19 +1433,19 @@
           },
           {
             id: 'M3',
-            title: 'Mission 3: S88 Hold &amp; Recovery',
+            title: 'Mission 3: S88 Hold & Recovery',
             desc: 'Place or fault the running S88 Batch into HOLDING/HELD, resolve any active fault, and execute RESTART to resume.',
             done: false
           },
           {
             id: 'M4',
-            title: 'Mission 4: MES Barcode Poka-Yoke &amp; MBR',
+            title: 'Mission 4: MES Barcode Poka-Yoke & MBR',
             desc: 'Download the L3 MBR in MES tab, test a trap lot (LOT-MED-2024-EXP), then scan valid lot LOT-MED-2026-09A to unlatch.',
             done: false
           },
           {
             id: 'M5',
-            title: 'Mission 5: IPC BGA Drift &amp; 1-Pt Calibration',
+            title: 'Mission 5: IPC BGA Drift & 1-Pt Calibration',
             desc: 'Trigger pH Probe Drift (+0.18 pH), draw an SV-101 BGA sample, and execute the Part 11 1-Pt Calibration Offset.',
             done: false
           }
@@ -1476,14 +1476,14 @@
           },
           {
             id: 'OQ-04',
-            title: 'OQ-04: MES Quarantined/Expired Barcode Trap &amp; Unlatch',
-            criteria: 'Verify trap lot raises ALM-MES-01 &amp; locks XV-101, and valid lot unlatches INTLK-MES-MAT.',
+            title: 'OQ-04: MES Quarantined/Expired Barcode Trap & Unlatch',
+            criteria: 'Verify trap lot raises ALM-MES-01 & locks XV-101, and valid lot unlatches INTLK-MES-MAT.',
             status: 'UNTESTED',
             signedBy: ''
           },
           {
             id: 'OQ-05',
-            title: 'OQ-05: Persistent IPC BGA Drift &amp; Part 11 Offset',
+            title: 'OQ-05: Persistent IPC BGA Drift & Part 11 Offset',
             criteria: 'Verify +0.18 pH drift raises ALM-MES-02 and Part 11 1-Pt Offset sets calOffset = -0.18 pH.',
             status: 'UNTESTED',
             signedBy: ''
@@ -1498,7 +1498,7 @@
       };
 
       // -----------------------------------------------------------------------
-      // B. AUDIT TRAIL &amp; ALARM MANAGEMENT
+      // B. AUDIT TRAIL & ALARM MANAGEMENT
       // -----------------------------------------------------------------------
       function formatSimClock(totalSec) {
         const hrs = String(Math.floor(totalSec / 3600)).padStart(2, '0');
@@ -1531,7 +1531,7 @@
       function raiseAlarm(id, priority, tag, message) {
         const existing = state.alarms.find(a => a.id === id);
         if (existing) {
-          if (existing.shelvedUntil &amp;&amp; state.simSeconds < existing.shelvedUntil) {
+          if (existing.shelvedUntil && state.simSeconds < existing.shelvedUntil) {
             return;
           }
           existing.shelvedUntil = null;
@@ -1617,10 +1617,10 @@
         const lshh101Tripped = li.pv >= li.hihi || state.faults.LSHH_101;
 
         // 2. INTLK-MES-MAT: Media Feed Valve XV-101 locked until valid lot scanned (unless Eng Bypass signed)
-        const intlkMesMatTripped = (state.mes.matIntlkTripped || !state.mes.mediaLotScanned) &amp;&amp; !state.interlockBypassed;
+        const intlkMesMatTripped = (state.mes.matIntlkTripped || !state.mes.mediaLotScanned) && !state.interlockBypassed;
 
         // 3. INTLK-101: Harvest Valve XV-102 locked if TIC-101 > 40.0°C OR SIP not complete (unless Eng Bypass signed)
-        const intlk101Tripped = ((tic.pv > 40.0) || !state.sipCompleted) &amp;&amp; !state.interlockBypassed;
+        const intlk101Tripped = ((tic.pv > 40.0) || !state.sipCompleted) && !state.interlockBypassed;
 
         // QA Fix 3: Enforce Hard Safety Interlock Priority on every scan cycle, even in MAN mode!
         if (lshh101Tripped) {
@@ -1632,12 +1632,12 @@
           clearAlarmCondition('ALM-LSHH-101');
         }
 
-        if (intlkMesMatTripped &amp;&amp; xv101.out > 0) {
+        if (intlkMesMatTripped && xv101.out > 0) {
           xv101.out = 0;
           xv101.pv = 0;
         }
 
-        if (intlk101Tripped &amp;&amp; xv102.out > 0) {
+        if (intlk101Tripped && xv102.out > 0) {
           xv102.out = 0;
           xv102.pv = 0;
           state.telemetryFlags.verifiedHighTempHarvestBlock = true;
@@ -1647,7 +1647,7 @@
       }
 
       // -----------------------------------------------------------------------
-      // E. QA FIX 1: PID ENGINE WITH ANTI-RESET WINDUP &amp; BUMPLESS TRANSFER
+      // E. QA FIX 1: PID ENGINE WITH ANTI-RESET WINDUP & BUMPLESS TRANSFER
       // -----------------------------------------------------------------------
       function computePidLoop(loop, isInterlockedOrFaulted) {
         const error = loop.sp - loop.pv;
@@ -1665,10 +1665,10 @@
         const rawOut = pTerm + candidateIntegral + dTerm;
 
         // QA Fix 1: Anti-Reset Windup — clamp integral if output is saturated in the direction of error
-        if (rawOut >= 100 &amp;&amp; error > 0) {
+        if (rawOut >= 100 && error > 0) {
           loop.out = 100.0;
           loop.saturated = true;
-        } else if (rawOut <= 0 &amp;&amp; error < 0) {
+        } else if (rawOut <= 0 && error < 0) {
           loop.out = 0.0;
           loop.saturated = true;
         } else {
@@ -1682,7 +1682,7 @@
 
       function applyBumplessTransfer(loop, newMode) {
         // QA Fix 1: Back-calculate integralTerm so OUT never spikes when transitioning MAN -> AUTO/CAS
-        if (loop.type === 'PID_LOOP' &amp;&amp; loop.mode === 'MAN' &amp;&amp; (newMode === 'AUTO' || newMode === 'CAS')) {
+        if (loop.type === 'PID_LOOP' && loop.mode === 'MAN' && (newMode === 'AUTO' || newMode === 'CAS')) {
           const error = loop.sp - loop.pv;
           loop.integralTerm = +(loop.out - (loop.kp * error)).toFixed(2);
           loop.prevError = error;
@@ -1691,7 +1691,7 @@
       }
 
       // -----------------------------------------------------------------------
-      // F. CONTINUOUS PROCESS PHYSICS &amp; S88 STATE MACHINE TICK
+      // F. CONTINUOUS PROCESS PHYSICS & S88 STATE MACHINE TICK
       // -----------------------------------------------------------------------
       function stepProcessPhysics() {
         const tic = state.tags['TIC-101'];
@@ -1750,7 +1750,7 @@
             } else if (currentPhase === 'PH_MEDIA_CHARGE') {
               if (tic.mode !== 'MAN') tic.sp = state.mes.recipeParams.growthTemp;
               intlks = evaluateInterlocks();
-              if (!intlks.intlkMesMatTripped &amp;&amp; !intlks.lshh101Tripped) {
+              if (!intlks.intlkMesMatTripped && !intlks.lshh101Tripped) {
                 if (xv101.mode === 'AUTO') {
                   xv101.out = 100;
                   xv101.pv = 100;
@@ -1774,14 +1774,14 @@
               const tempOk = Math.abs(tic.pv - state.mes.recipeParams.growthTemp) <= 1.2;
               const phOk = Math.abs(ph.pv - state.mes.recipeParams.phTarget) <= 0.08;
               const doOk = Math.abs(doLoop.pv - state.mes.recipeParams.doTarget) <= 4.0;
-              if (tempOk &amp;&amp; phOk &amp;&amp; doOk) {
+              if (tempOk && phOk && doOk) {
                 state.equilibrateMinutes += 1;
                 if (state.equilibrateMinutes >= 2) {
                   advanceToNextPhase();
                 }
               }
             } else if (currentPhase === 'PH_INOC_GROWTH') {
-              if (state.mes.inocLotScanned &amp;&amp; state.mes.bgaSamplePulled &amp;&amp; state.mes.phCalibrated) {
+              if (state.mes.inocLotScanned && state.mes.bgaSamplePulled && state.mes.phCalibrated) {
                 if (agit.mode !== 'MAN') agit.sp = 165.0;
                 state.growthMinutes += 1;
                 state.vcd = Math.min(6.5, +(state.vcd * 1.16 + 0.18).toFixed(2));
@@ -1834,17 +1834,17 @@
         intlks = evaluateInterlocks();
 
         // --- 3. Physical Vessel Volume (LI-101) ---
-        if (xv101.pv >= 50 &amp;&amp; !intlks.lshh101Tripped &amp;&amp; !intlks.intlkMesMatTripped) {
+        if (xv101.pv >= 50 && !intlks.lshh101Tripped && !intlks.intlkMesMatTripped) {
           lvl.pv = Math.min(2000, +(lvl.pv + 100.0).toFixed(1));
         }
-        if (xv102.pv >= 50 &amp;&amp; !intlks.intlk101Tripped) {
+        if (xv102.pv >= 50 && !intlks.intlk101Tripped) {
           lvl.pv = Math.max(180, +(lvl.pv - 120.0).toFixed(1));
         }
         lvl.out = +((lvl.pv / 2000) * 100).toFixed(1);
 
-        // --- 4. Temperature Loop (TIC-101) &amp; Fault: TV-101 Stuck ---
+        // --- 4. Temperature Loop (TIC-101) & Fault: TV-101 Stuck ---
         computePidLoop(tic, state.faults.TV101_STUCK);
-        const metabolicHeat = (state.phaseIndex === 3 &amp;&amp; state.batchState === 'RUNNING') ? state.vcd * 0.22 : 0;
+        const metabolicHeat = (state.phaseIndex === 3 && state.batchState === 'RUNNING') ? state.vcd * 0.22 : 0;
         let effectiveValveOut = tic.out;
         if (state.faults.TV101_STUCK) {
           // Jacket valve mechanically stuck at 68% heating position -> cannot cool
@@ -1856,16 +1856,16 @@
         const deltaT = (effectiveValveOut - 22.0) * 0.16 + metabolicHeat - (tic.pv - 22.0) * 0.04;
         tic.pv = Math.max(15.0, Math.min(138.0, +(tic.pv + deltaT).toFixed(2)));
 
-        // --- 5. QA Fix 5: Persistent pH Drift &amp; 1-Pt Calibration Offset Math ---
+        // --- 5. QA Fix 5: Persistent pH Drift & 1-Pt Calibration Offset Math ---
         state.phModel.sensorDriftBias = state.faults.PH_DRIFT ? 0.18 : 0.00;
         computePidLoop(ph, false);
-        const lacticAcidLoad = (state.phaseIndex === 3 &amp;&amp; state.batchState === 'RUNNING') ? 0.015 : 0.002;
+        const lacticAcidLoad = (state.phaseIndex === 3 && state.batchState === 'RUNNING') ? 0.015 : 0.002;
         const baseAdditionEffect = ((ph.out - 15.0) / 100) * 0.08;
         state.phModel.trueProcessPh = Math.max(5.80, Math.min(8.20, +(state.phModel.trueProcessPh + baseAdditionEffect - lacticAcidLoad + (7.00 - state.phModel.trueProcessPh) * 0.25).toFixed(3)));
         // displayedPV = trueProcessPh + sensorDriftBias + calOffset
         ph.pv = +(state.phModel.trueProcessPh + state.phModel.sensorDriftBias + state.phModel.calOffset).toFixed(2);
 
-        // --- 6. Dissolved Oxygen (AIC-103) &amp; Agitator Speed (SIC-101) ---
+        // --- 6. Dissolved Oxygen (AIC-103) & Agitator Speed (SIC-101) ---
         computePidLoop(doLoop, state.faults.DO_BAD_INPUT);
         computePidLoop(agit, false);
 
@@ -1902,7 +1902,7 @@
           state.bgaMarkers = state.bgaMarkers.filter(m => m.simSec >= oldestSec);
         }
 
-        // --- 8. QA Fix 8: Reactive Mission &amp; OQ Evaluators on Every Scan Cycle ---
+        // --- 8. QA Fix 8: Reactive Mission & OQ Evaluators on Every Scan Cycle ---
         evaluateMissionsAndOqReactively();
       }
 
@@ -1932,12 +1932,12 @@
       }
 
       // -----------------------------------------------------------------------
-      // G. QA FIX 8: REACTIVE MISSION &amp; OQ VERIFICATION ENGINE
+      // G. QA FIX 8: REACTIVE MISSION & OQ VERIFICATION ENGINE
       // -----------------------------------------------------------------------
       function evaluateMissionsAndOqReactively() {
         let changed = false;
 
-        // Mission 1 &amp; OQ-01: Faceplate &amp; Interlocks
+        // Mission 1 & OQ-01: Faceplate & Interlocks
         if (state.telemetryFlags.inspectedInterlockOnXv102 || state.telemetryFlags.verifiedHighTempHarvestBlock) {
           if (!state.missions[0].done) { state.missions[0].done = true; changed = true; }
           if (state.oqTests[0].status !== 'PASS') {
@@ -1956,7 +1956,7 @@
           }
         }
 
-        // Mission 2 &amp; OQ-03: Control Studio Bad_Input Fault
+        // Mission 2 & OQ-03: Control Studio Bad_Input Fault
         if (state.telemetryFlags.experiencedBadInputShed) {
           if (!state.missions[1].done) { state.missions[1].done = true; changed = true; }
           if (state.oqTests[2].status !== 'PASS') {
@@ -1966,16 +1966,16 @@
           }
         }
 
-        // Mission 3: S88 Hold &amp; Recovery
+        // Mission 3: S88 Hold & Recovery
         if (state.telemetryFlags.experiencedS88HoldAndRestart) {
           if (!state.missions[2].done) { state.missions[2].done = true; changed = true; }
         }
 
-        // Mission 4 &amp; OQ-04: MES Barcode Poka-Yoke &amp; MBR Download
-        if (state.mes.mbrDownloaded &amp;&amp; state.telemetryFlags.testedMesBarcodeTrap &amp;&amp; state.mes.mediaLotScanned) {
+        // Mission 4 & OQ-04: MES Barcode Poka-Yoke & MBR Download
+        if (state.mes.mbrDownloaded && state.telemetryFlags.testedMesBarcodeTrap && state.mes.mediaLotScanned) {
           if (!state.missions[3].done) { state.missions[3].done = true; changed = true; }
         }
-        if (state.telemetryFlags.testedMesBarcodeTrap &amp;&amp; state.mes.mediaLotScanned) {
+        if (state.telemetryFlags.testedMesBarcodeTrap && state.mes.mediaLotScanned) {
           if (state.oqTests[3].status !== 'PASS') {
             state.oqTests[3].status = 'PASS';
             state.oqTests[3].signedBy = state.role;
@@ -1983,7 +1983,7 @@
           }
         }
 
-        // Mission 5 &amp; OQ-05: IPC BGA Drift &amp; 1-Pt Calibration Offset
+        // Mission 5 & OQ-05: IPC BGA Drift & 1-Pt Calibration Offset
         if (state.telemetryFlags.completedBgaOffsetCalibration) {
           if (!state.missions[4].done) { state.missions[4].done = true; changed = true; }
           if (state.oqTests[4].status !== 'PASS') {
@@ -2039,7 +2039,7 @@
           mesStatus.className = 'font-mono text-[11px] font-bold text-white';
         }
 
-        // Top P&amp;ID KPIs
+        // Top P&ID KPIs
         const sipEl = document.getElementById('kpi-sip-status');
         if (state.sipCompleted) {
           sipEl.textContent = 'STERILE ✓ (5.0/5.0m)';
@@ -2058,7 +2058,7 @@
           `<span class="px-2 py-0.5 rounded bg-red-950 text-red-300 border border-red-700 font-mono text-[10px] font-bold">⚡ ${k}</span>`
         ).join('');
 
-        // Dynamic MES Gate Overlay Banner on P&amp;ID
+        // Dynamic MES Gate Overlay Banner on P&ID
         const mesGateBanner = document.getElementById('pid-mes-gate-banner');
         const mesGateTitle = document.getElementById('pid-mes-gate-title');
         const mesGateDesc = document.getElementById('pid-mes-gate-desc');
@@ -2070,12 +2070,12 @@
           gateMsg = 'L3 MES Watchdog disconnected. MBR downloads and barcode gate clearances are blocked until L3 Comm is restored.';
         } else if (state.batchState === 'RUNNING') {
           mesGateTitle.textContent = 'ISA-95 LEVEL 3 MES VERIFICATION GATE ACTIVE';
-          if (state.phaseIndex === 0 &amp;&amp; !state.mes.mbrDownloaded) {
+          if (state.phaseIndex === 0 && !state.mes.mbrDownloaded) {
             gateMsg = 'PH_SIP paused awaiting Master Batch Record (MBR) Parameter Download from MES.';
-          } else if (state.phaseIndex === 1 &amp;&amp; !state.mes.mediaLotScanned &amp;&amp; !state.interlockBypassed) {
+          } else if (state.phaseIndex === 1 && !state.mes.mediaLotScanned && !state.interlockBypassed) {
             gateMsg = 'PH_MEDIA_CHARGE paused awaiting valid Media Lot Barcode Scan (LOT-MED-2026-09A) at port MAT-101.';
-          } else if (state.phaseIndex === 3 &amp;&amp; (!state.mes.inocLotScanned || !state.mes.bgaSamplePulled || !state.mes.phCalibrated)) {
-            gateMsg = 'PH_INOC_GROWTH awaiting Seed Lot Scan (LOT-INOC-2026-88C) &amp; SV-101 IPC BGA pH Reconciliation.';
+          } else if (state.phaseIndex === 3 && (!state.mes.inocLotScanned || !state.mes.bgaSamplePulled || !state.mes.phCalibrated)) {
+            gateMsg = 'PH_INOC_GROWTH awaiting Seed Lot Scan (LOT-INOC-2026-88C) & SV-101 IPC BGA pH Reconciliation.';
           }
         }
 
@@ -2117,15 +2117,15 @@
         document.getElementById('svg-tv101-body').setAttribute('fill', state.faults.TV101_STUCK ? '#ef4444' : '#0ea5e9');
         document.getElementById('svg-tv101-label').textContent = state.faults.TV101_STUCK ? 'TV-101 STUCK!' : 'TV-101';
 
-        // SIP Steam &amp; Pipe Flows
-        const isSipActive = state.batchState === 'RUNNING' &amp;&amp; state.phaseIndex === 0 &amp;&amp; state.mes.mbrDownloaded;
+        // SIP Steam & Pipe Flows
+        const isSipActive = state.batchState === 'RUNNING' && state.phaseIndex === 0 && state.mes.mbrDownloaded;
         document.getElementById('svg-steam-group').classList.toggle('hidden', !isSipActive);
         document.getElementById('pipe-sip-flow').classList.toggle('hidden', !isSipActive);
         document.getElementById('pipe-feed-flow').classList.toggle('hidden', state.tags['XV-101'].pv < 50);
         document.getElementById('pipe-harvest-flow').classList.toggle('hidden', state.tags['XV-102'].pv < 50);
         document.getElementById('pipe-base-flow').classList.toggle('hidden', state.tags['AIC-102'].out < 18);
 
-        // MAT-101 &amp; SV-101 SVG Callouts
+        // MAT-101 & SV-101 SVG Callouts
         const matSvgTxt = document.getElementById('svg-mat101-status');
         matSvgTxt.textContent = state.mes.mediaLotScanned ? 'LOT VERIFIED ✓' : 'LOCKED (NO LOT)';
         matSvgTxt.setAttribute('fill', state.mes.mediaLotScanned ? '#10b981' : '#f59e0b');
@@ -2163,7 +2163,7 @@
               pvTxt.textContent = `${t.pv.toFixed(decimals)} ${t.unit}`;
             }
           }
-          if (spTxt &amp;&amp; t.type === 'PID_LOOP') {
+          if (spTxt && t.type === 'PID_LOOP') {
             const decimals = t.id === 'AIC-102' ? 2 : 1;
             spTxt.textContent = `SP: ${t.sp.toFixed(decimals)} | OUT: ${t.out.toFixed(0)}%`;
           }
@@ -2172,7 +2172,7 @@
         // Update LI-101 % display
         document.getElementById('tag-sp-LI-101').textContent = `${state.tags['LI-101'].out.toFixed(1)}% | LSHH: 95%`;
 
-        // Update XV-101 &amp; XV-102 Interlock Subtitles on P&amp;ID
+        // Update XV-101 & XV-102 Interlock Subtitles on P&ID
         const xv101Sub = document.getElementById('tag-sub-XV-101');
         if (xv101Sub) {
           const xv101Locked = intlks.lshh101Tripped || intlks.intlkMesMatTripped;
@@ -2256,7 +2256,7 @@
         const intlkHtml = [
           {
             code: 'INTLK-101 (XV-102)',
-            desc: `Harvest Lock: Requires TIC-101 <= 40.0°C (${state.tags['TIC-101'].pv.toFixed(1)}°C) &amp; SIP Complete (${state.sipCompleted ? 'YES' : 'NO'})`,
+            desc: `Harvest Lock: Requires TIC-101 <= 40.0°C (${state.tags['TIC-101'].pv.toFixed(1)}°C) & SIP Complete (${state.sipCompleted ? 'YES' : 'NO'})`,
             tripped: intlks.intlk101Tripped
           },
           {
@@ -2307,7 +2307,7 @@
 
         const container = document.getElementById('sfc-phases-container');
         container.innerHTML = state.phases.map((p, idx) => {
-          const isCurrent = idx === state.phaseIndex &amp;&amp; state.batchState !== 'COMPLETE';
+          const isCurrent = idx === state.phaseIndex && state.batchState !== 'COMPLETE';
           const isDone = idx < state.phaseIndex || state.batchState === 'COMPLETE';
           const pct = Math.max(0, getPhaseProgressPercent(idx));
 
@@ -2358,8 +2358,8 @@
         document.getElementById('fbd-pid-tuning').textContent = `Kp:${t.kp} Int:${(t.integralTerm || 0).toFixed(0)}% ARW:ON`;
 
         const intlks = evaluateInterlocks();
-        const isForceClosed = (t.id === 'XV-101' &amp;&amp; (intlks.lshh101Tripped || intlks.intlkMesMatTripped)) ||
-                              (t.id === 'XV-102' &amp;&amp; intlks.intlk101Tripped);
+        const isForceClosed = (t.id === 'XV-101' && (intlks.lshh101Tripped || intlks.intlkMesMatTripped)) ||
+                              (t.id === 'XV-102' && intlks.intlk101Tripped);
         document.getElementById('fbd-cnd-state').textContent = isForceClosed ? 'FORCE_0%' : 'PASS_THRU';
         document.getElementById('fbd-cnd-state').setAttribute('fill', isForceClosed ? '#ef4444' : '#10b981');
         document.getElementById('fbd-cnd-sub').textContent = isForceClosed ? 'Hard Interlock Active' : 'No Active Trip';
@@ -2381,7 +2381,7 @@
         }
 
         const matBadge = document.getElementById('mes-mat-badge');
-        if (state.mes.mediaLotScanned &amp;&amp; !state.mes.matIntlkTripped) {
+        if (state.mes.mediaLotScanned && !state.mes.matIntlkTripped) {
           matBadge.textContent = 'INTLK-MES-MAT UNLATCHED ✓';
           matBadge.className = 'font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-400 border border-emerald-700';
         } else {
@@ -2389,7 +2389,7 @@
           matBadge.className = 'font-mono text-[10px] font-bold px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-700';
         }
 
-        // Section C: IPC BGA &amp; Offset Math (QA Fix 5)
+        // Section C: IPC BGA & Offset Math (QA Fix 5)
         const onlinePh = state.tags['AIC-102'].pv;
         const truePh = state.phModel.trueProcessPh;
         const liveDrift = +(Math.abs(onlinePh - truePh)).toFixed(2);
@@ -2411,11 +2411,11 @@
         }
 
         // Section D: Review by Exception (RBE)
-        const unackAlarms = state.alarms.filter(a => !a.ack &amp;&amp; (!a.shelvedUntil || state.simSeconds >= a.shelvedUntil)).length;
+        const unackAlarms = state.alarms.filter(a => !a.ack && (!a.shelvedUntil || state.simSeconds >= a.shelvedUntil)).length;
         const rbeItems = [
-          { label: 'ISA-95 L3 MBR Setpoints Downloaded (SYNC_BIT=1)', ok: state.mes.mbrDownloaded &amp;&amp; state.mes.commOnline },
-          { label: 'Barcoded Raw Material Poka-Yoke Unlatched (MAT-101)', ok: state.mes.mediaLotScanned &amp;&amp; !state.mes.matIntlkTripped },
-          { label: 'Off-Line IPC BGA pH Reconciled (|ΔpH| <= 0.05)', ok: state.mes.bgaSamplePulled &amp;&amp; liveDrift <= 0.05 },
+          { label: 'ISA-95 L3 MBR Setpoints Downloaded (SYNC_BIT=1)', ok: state.mes.mbrDownloaded && state.mes.commOnline },
+          { label: 'Barcoded Raw Material Poka-Yoke Unlatched (MAT-101)', ok: state.mes.mediaLotScanned && !state.mes.matIntlkTripped },
+          { label: 'Off-Line IPC BGA pH Reconciled (|ΔpH| <= 0.05)', ok: state.mes.bgaSamplePulled && liveDrift <= 0.05 },
           { label: 'Zero Unacknowledged Active Alarms', ok: unackAlarms === 0 }
         ];
         document.getElementById('mes-rbe-checklist').innerHTML = rbeItems.map(i => `
@@ -2487,7 +2487,7 @@
       }
 
       // -----------------------------------------------------------------------
-      // I. QA FIX 7: HIGH-DPI HISTORIAN CANVAS &amp; 300-TICK RING BUFFER RENDERER
+      // I. QA FIX 7: HIGH-DPI HISTORIAN CANVAS & 300-TICK RING BUFFER RENDERER
       // -----------------------------------------------------------------------
       function drawHistorianCanvas() {
         const canvas = document.getElementById('historian-canvas');
@@ -2511,7 +2511,7 @@
         const h = rect.height;
         ctx.clearRect(0, 0, w, h);
 
-        // Grid lines &amp; Y-axis percentage labels
+        // Grid lines & Y-axis percentage labels
         ctx.strokeStyle = '#1e293b';
         ctx.fillStyle = '#475569';
         ctx.font = '10px "JetBrains Mono", monospace';
@@ -2622,7 +2622,7 @@
               </div>
               <div class="flex items-center gap-1.5 mt-2 pt-1.5 border-t border-slate-800/80">
                 <button onclick="window.simApp.runAutomatedOqTest(${idx})" class="flex-1 py-1 rounded bg-amber-600/90 hover:bg-amber-500 text-slate-950 font-bold text-[10px] transition">
-                  Execute &amp;amp; Sign OQ
+                  Execute &amp; Sign OQ
                 </button>
               </div>
             </div>
@@ -2651,7 +2651,7 @@
             <td class="py-1 px-2 text-cyan-400">${r.simTime}</td>
             <td class="py-1 px-2 font-bold text-amber-300">${r.actionType}</td>
             <td class="py-1 px-2 text-white font-semibold">${r.tag}</td>
-            <td class="py-1 px-2 text-slate-200">${r.oldVal} &amp;rarr; <strong class="text-cyan-300">${r.newVal}</strong></td>
+            <td class="py-1 px-2 text-slate-200">${r.oldVal} &rarr; <strong class="text-cyan-300">${r.newVal}</strong></td>
             <td class="py-1 px-2 text-emerald-400">${r.user}</td>
           </tr>
         `).join('');
@@ -2755,7 +2755,7 @@
           const oldMode = t.mode;
 
           // QA Fix 6: Defer mode mutation until Part 11 modal is signed when overriding to MAN during RUNNING batch
-          if (newMode === 'MAN' &amp;&amp; state.batchState === 'RUNNING') {
+          if (newMode === 'MAN' && state.batchState === 'RUNNING') {
             requirePart11Signature(
               `Switch ${t.id} Mode from ${oldMode} to MAN while batch ${state.batchId} is RUNNING`,
               'Process Disturbance Recovery / Manual Stabilization',
@@ -2813,14 +2813,14 @@
           const intlks = evaluateInterlocks();
 
           // QA Fix 3: Enforce Hard Safety Interlock Priority even when dragging manual slider!
-          if (t.id === 'XV-101' &amp;&amp; numericVal > 0 &amp;&amp; (intlks.lshh101Tripped || intlks.intlkMesMatTripped)) {
+          if (t.id === 'XV-101' && numericVal > 0 && (intlks.lshh101Tripped || intlks.intlkMesMatTripped)) {
             t.out = 0;
             t.pv = 0;
             raiseAlarm('ALM-INTLK-XV101', 'WARNING', 'XV-101', 'Hard Interlock Active (LSHH-101 / INTLK-MES-MAT) — Manual Open Blocked');
             renderFaceplate();
             return;
           }
-          if (t.id === 'XV-102' &amp;&amp; numericVal > 0 &amp;&amp; intlks.intlk101Tripped) {
+          if (t.id === 'XV-102' && numericVal > 0 && intlks.intlk101Tripped) {
             t.out = 0;
             t.pv = 0;
             state.telemetryFlags.verifiedHighTempHarvestBlock = true;
@@ -2849,7 +2849,7 @@
 
           // QA Fix 3: Hard safety interlock overrides manual OPEN command
           if (cmd === 'OPEN') {
-            if (t.id === 'XV-101' &amp;&amp; (intlks.lshh101Tripped || intlks.intlkMesMatTripped)) {
+            if (t.id === 'XV-101' && (intlks.lshh101Tripped || intlks.intlkMesMatTripped)) {
               t.out = 0;
               t.pv = 0;
               raiseAlarm('ALM-INTLK-XV101', 'WARNING', 'XV-101', 'Hard Interlock Blocked Manual OPEN on XV-101 (Scan Valid Material Lot or Clear LSHH-101)');
@@ -2857,7 +2857,7 @@
               updateHeaderAndPid();
               return;
             }
-            if (t.id === 'XV-102' &amp;&amp; intlks.intlk101Tripped) {
+            if (t.id === 'XV-102' && intlks.intlk101Tripped) {
               t.out = 0;
               t.pv = 0;
               state.telemetryFlags.verifiedHighTempHarvestBlock = true;
@@ -2884,7 +2884,7 @@
           }
           const nextState = !state.interlockBypassed;
           requirePart11Signature(
-            `${nextState ? 'ENABLE' : 'REMOVE'} Engineering Maintenance Bypass on INTLK-101 &amp; INTLK-MES-MAT`,
+            `${nextState ? 'ENABLE' : 'REMOVE'} Engineering Maintenance Bypass on INTLK-101 & INTLK-MES-MAT`,
             'Authorized Temporary Permissive Override per SOP-VAL-014',
             (sig) => {
               const prev = state.interlockBypassed;
@@ -2896,23 +2896,23 @@
           );
         },
 
-        // --- QA Fix 2: S88 Batch Executive Commands &amp; RESET UNIT ---
+        // --- QA Fix 2: S88 Batch Executive Commands & RESET UNIT ---
         commandBatch(cmd) {
           const oldState = state.batchState;
-          if (cmd === 'START' &amp;&amp; oldState === 'IDLE') {
+          if (cmd === 'START' && oldState === 'IDLE') {
             state.batchState = 'RUNNING';
             state.registers.command = 'START (1)';
             state.registers.state = 'RUNNING (2)';
-          } else if (cmd === 'HOLD' &amp;&amp; oldState === 'RUNNING') {
+          } else if (cmd === 'HOLD' && oldState === 'RUNNING') {
             state.batchState = 'HOLDING';
             state.registers.command = 'HOLD (2)';
             state.registers.state = 'HOLDING (3)';
             state.telemetryFlags.heldOnce = true;
-          } else if (cmd === 'RESTART' &amp;&amp; (oldState === 'HELD' || oldState === 'HOLDING')) {
+          } else if (cmd === 'RESTART' && (oldState === 'HELD' || oldState === 'HOLDING')) {
             state.batchState = 'RESTARTING';
             state.registers.command = 'RESTART (3)';
             state.registers.state = 'RESTARTING (4)';
-          } else if (cmd === 'ABORT' &amp;&amp; oldState !== 'IDLE') {
+          } else if (cmd === 'ABORT' && oldState !== 'IDLE') {
             state.batchState = 'ABORTED';
             state.registers.command = 'ABORT (4)';
             state.registers.state = 'ABORTED (6)';
@@ -2969,7 +2969,7 @@
           renderBatchSfc();
         },
 
-        // --- QA Fix 4: MES / B2MML Handshake &amp; Poka-Yoke Latch ---
+        // --- QA Fix 4: MES / B2MML Handshake & Poka-Yoke Latch ---
         toggleMesCommStatus() {
           const prev = state.mes.commOnline;
           state.mes.commOnline = !prev;
@@ -3018,7 +3018,7 @@
             state.mes.mediaLotScanned = true;
             state.mes.matIntlkTripped = false;
             clearAlarmCondition('ALM-MES-01');
-            fb.textContent = `✓ VERIFIED: ${lotId} (QA Released) — INTLK-MES-MAT Unlatched &amp; ALM-MES-01 Cleared.`;
+            fb.textContent = `✓ VERIFIED: ${lotId} (QA Released) — INTLK-MES-MAT Unlatched & ALM-MES-01 Cleared.`;
             fb.className = 'text-[11px] font-mono text-emerald-400 bg-emerald-950/40 px-2.5 py-1.5 rounded border border-emerald-700';
             logAudit('MES_BARCODE_OK', 'MAT-101', prevLot, `${lotId} (INTLK-MES-MAT UNLATCHED)`);
           } else if (lotId === 'LOT-INOC-2026-88C') {
@@ -3035,8 +3035,8 @@
             state.telemetryFlags.testedMesBarcodeTrap = true;
             state.tags['XV-101'].out = 0;
             state.tags['XV-101'].pv = 0;
-            raiseAlarm('ALM-MES-01', 'CRITICAL', 'MAT-101', `Material Poka-Yoke Trip: ${lotId} Rejected — INTLK-MES-MAT Latched &amp; XV-101 Locked`);
-            fb.textContent = `✗ POKA-YOKE TRIP: ${lotId} is Expired/Quarantined! INTLK-MES-MAT Latched &amp; ALM-MES-01 Raised.`;
+            raiseAlarm('ALM-MES-01', 'CRITICAL', 'MAT-101', `Material Poka-Yoke Trip: ${lotId} Rejected — INTLK-MES-MAT Latched & XV-101 Locked`);
+            fb.textContent = `✗ POKA-YOKE TRIP: ${lotId} is Expired/Quarantined! INTLK-MES-MAT Latched & ALM-MES-01 Raised.`;
             fb.className = 'text-[11px] font-mono text-red-300 bg-red-950/60 px-2.5 py-1.5 rounded border border-red-600';
             logAudit('MES_POKA_YOKE_TRIP', 'MAT-101', prevLot, `${lotId} (REJECTED / INTLK-MES-MAT LATCHED)`);
           }
@@ -3047,7 +3047,7 @@
           updateHeaderAndPid();
         },
 
-        // --- QA Fix 5: Persistent IPC BGA Drift &amp; 1-Pt Calibration Offset Math ---
+        // --- QA Fix 5: Persistent IPC BGA Drift & 1-Pt Calibration Offset Math ---
         pullBgaSample() {
           const onlinePh = state.tags['AIC-102'].pv;
           const truePh = +state.phModel.trueProcessPh.toFixed(2);
@@ -3195,7 +3195,7 @@
 
         // --- Alarm Banner Operations ---
         acknowledgeTopAlarm() {
-          const top = state.alarms.find(a => (!a.shelvedUntil || state.simSeconds >= a.shelvedUntil) &amp;&amp; !a.ack);
+          const top = state.alarms.find(a => (!a.shelvedUntil || state.simSeconds >= a.shelvedUntil) && !a.ack);
           if (top) {
             top.ack = true;
             logAudit('ALARM_ACK', top.tag, 'UNACK', `ACK (${top.id})`);
@@ -3221,7 +3221,7 @@
           }
         },
 
-        // --- Automated CSA / OQ Challenge Runner &amp; RFC-4180 CSV Exporter (QA Fix 8) ---
+        // --- Automated CSA / OQ Challenge Runner & RFC-4180 CSV Exporter (QA Fix 8) ---
         runAutomatedOqTest(idx) {
           const test = state.oqTests[idx];
           if (!test) return;
@@ -3275,7 +3275,7 @@
 
           if (format === 'JSON') {
             const payload = {
-              system: 'Emerson DeltaV Live &amp; L3 MES Biopharma Simulator (QA-Hardened)',
+              system: 'Emerson DeltaV Live & L3 MES Biopharma Simulator (QA-Hardened)',
               unit: 'UNIT_BRX_101',
               batchId: state.batchId,
               exportedAt: new Date().toISOString(),
@@ -3314,7 +3314,7 @@
       };
 
       // -----------------------------------------------------------------------
-      // K. INITIALIZATION &amp; REAL-TIME ANIMATION LOOPS
+      // K. INITIALIZATION & REAL-TIME ANIMATION LOOPS
       // -----------------------------------------------------------------------
       window.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < 40; i++) {
@@ -3329,7 +3329,7 @@
           });
         }
 
-        logAudit('SYSTEM_BOOT', 'UNIT_BRX_101', 'OFFLINE', 'ONLINE (QA-Hardened DeltaV Live &amp; L3 MES Initialized)');
+        logAudit('SYSTEM_BOOT', 'UNIT_BRX_101', 'OFFLINE', 'ONLINE (QA-Hardened DeltaV Live & L3 MES Initialized)');
         evaluateMissionsAndOqReactively();
         updateHeaderAndPid();
         renderFaceplate();
@@ -3363,7 +3363,7 @@
 
         // Smooth 60fps Rushton Impeller Rotation
         function animateImpeller() {
-          if (state.simSpeed > 0 &amp;&amp; state.tags['SIC-101'].pv > 1) {
+          if (state.simSpeed > 0 && state.tags['SIC-101'].pv > 1) {
             state.impellerAngle = (state.impellerAngle + (state.tags['SIC-101'].pv / 25)) % 360;
             const scaleX = Math.cos((state.impellerAngle * Math.PI) / 180).toFixed(2);
             const up = document.getElementById('svg-impeller-upper');
