@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coldforge — Luke Holmes | coldforge.tech</title>
-<meta name="description" content="Portfolio of Luke Holmes — biopharma validation, browser tooling, machine learning, and creative engineering.">
+<meta name="description" content="Portfolio of Luke Holmes — computer system validation, automation, and the tools I build along the way.">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Coldforge — Luke Holmes">
-<meta property="og:description" content="Biopharma validation, browser tooling, machine learning, and creative engineering. Projects include GXPLearn, SplitStitch, and Gutterbones 1977.">
+<meta property="og:description" content="Computer system validation, automation, and the tools I build along the way. Projects include GXPLearn, SplitStitch, and Gutterbones 1977.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coldforge.tech">
 <meta property="og:image" content="https://raw.githubusercontent.com/LukeHolmes/Dices-and-Devices/main/gutterbones-screenshot.jpg">
@@ -16,7 +16,7 @@
 <!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Coldforge — Luke Holmes">
-<meta name="twitter:description" content="Biopharma validation, browser tooling, machine learning, and creative engineering.">
+<meta name="twitter:description" content="Computer system validation, automation, and the tools I build along the way.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/LukeHolmes/Dices-and-Devices/main/gutterbones-screenshot.jpg">
 
 <!-- Favicon — bracket C mark -->
@@ -150,22 +150,17 @@
   /* ── Project grid ── */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.35rem;
     margin-bottom: 4rem;
     align-items: stretch;
   }
 
-  .projects-grid > .pcard { grid-column: span 2; }
-  .projects-grid > .pcard:nth-child(n+4) { grid-column: span 3; }
   @media (max-width: 960px) {
     .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .projects-grid > .pcard, .projects-grid > .pcard:nth-child(n+4) { grid-column: span 1; }
-    .projects-grid > .pcard:last-child { grid-column: 1 / -1; }
   }
   @media (max-width: 560px) {
     .projects-grid { grid-template-columns: 1fr; }
-    .projects-grid > .pcard:last-child { grid-column: auto; }
     nav { flex-wrap: wrap; gap: 1rem; }
     .nav-right { width: 100%; justify-content: flex-start; flex-wrap: wrap; gap: 1rem; }
   }
@@ -383,7 +378,7 @@
   <section class="hero">
     <p class="hero-label">Portfolio</p>
     <h1 class="hero-headline">Validation, data<br>and <em>things that ship.</em></h1>
-    <p class="hero-sub">Biopharma systems, browser tooling, machine learning, and the occasional dice game — built to work, not just to demo.</p>
+    <p class="hero-sub">Change control and computer system validation in biopharma by day; automation, developer tools, and the occasional dice game on the side — built to work, not just to demo.</p>
   </section>
 
   <!-- Projects -->
@@ -478,6 +473,42 @@
       <div class="pcard-footer">
         <a class="btn-live" href="/bioreactor-sim/">View landing page</a>
         <a class="btn-github" href="/sim/deltav-brx-101.html" target="_blank" rel="noopener">Open workstation ↗</a>
+      </div>
+    </div>
+
+    <div class="pcard" role="listitem">
+      <div class="pcard-thumb">
+        <svg viewBox="0 0 320 200" role="img" aria-label="airlock" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="200" fill="var(--preview-bg)"/><text x="160" y="110" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="30" fill="var(--ink-faint)">airlock</text></svg>
+      </div>
+      <div class="pcard-body">
+        <span class="pcard-num">06 — Desktop tooling</span>
+        <h2 class="pcard-title">airlock</h2>
+        <p class="pcard-desc">Sandboxed browser desktop app: an Electron shell that runs the browser inside a Docker container and streams it back over KasmVNC, keeping browsing isolated from the host. v0.4.0 beta, Linux first.</p>
+        <div class="pcard-tags">
+          <span class="tag">Electron</span><span class="tag">Docker</span><span class="tag">KasmVNC</span><span class="tag">Sandboxing</span>
+        </div>
+      </div>
+      <div class="pcard-footer">
+        <a class="btn-live" href="https://github.com/LukeHolmes/airlock" target="_blank" rel="noopener">View project ↗</a>
+      </div>
+    </div>
+
+    <div class="pcard" role="listitem">
+      <div class="pcard-thumb">
+        <svg viewBox="0 0 320 200" role="img" aria-label="SnapFlow" xmlns="http://www.w3.org/2000/svg"><rect width="320" height="200" fill="var(--preview-bg)"/><text x="160" y="110" text-anchor="middle" font-family="'DM Serif Display', Georgia, serif" font-size="30" fill="var(--ink-faint)">SnapFlow</text></svg>
+      </div>
+      <div class="pcard-body">
+        <span class="pcard-num">07 — Desktop tooling</span>
+        <h2 class="pcard-title">SnapFlow</h2>
+        <p class="pcard-desc">Local-first screen-capture app: capture, context, deliver. Region and window capture, on-device OCR, SQLite full-text search history, local PII detection, and output presets, with a Node backend for sync. In active development.</p>
+        <p class="pcard-desc">The web preview is a very early UI demo with sample data only (no real capture or OCR). The desktop app has the real features.</p>
+        <div class="pcard-tags">
+          <span class="tag">Electron</span><span class="tag">TypeScript</span><span class="tag">SQLite FTS5</span><span class="tag">OCR</span><span class="tag">In development</span>
+        </div>
+      </div>
+      <div class="pcard-footer">
+        <a class="btn-live" href="https://github.com/LukeHolmes/SnapFlow" target="_blank" rel="noopener">View project ↗</a>
+        <a class="btn-github" href="https://coldforge.tech/SnapFlow/" target="_blank" rel="noopener">Early web preview ↗</a>
       </div>
     </div>
 
